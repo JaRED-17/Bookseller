@@ -1,0 +1,124 @@
+/* COMMON */
+
+body {
+    margin: 0;
+    min-width: 360px;
+}
+
+.no-overflow {
+    overflow: hidden;
+}
+
+/* Buttons */
+
+.button {    
+    display: block;
+    width: max-content;
+    font-size: 18px;
+    border-radius: 10px;
+    text-align: center;    
+    background-color: blue;
+    color: red; 
+    padding: 5px 20px;   
+}
+
+.button:hover {
+    background-color: lightblue;
+    cursor: pointer;
+}
+
+.button-close {
+    position: relative;
+    width: 22px;
+    height: 22px;
+    float: right;
+    margin: 10px;
+    cursor: pointer;
+}
+
+.button-close::before,
+.button-close::after {
+    content: '';
+    position: absolute;
+    width: 22px;
+    height: 2px;
+    background-color: #333;
+    top: calc(50%);
+    transform: rotate(45deg);
+    transition: .2s ease-out;
+    -webkit-backface-visibility: hidden;
+}
+
+.button-close::after {
+    transition: .2s ease-in-out;
+    transform: rotate(-45deg);
+}
+
+.button-close:hover::before {
+    transform: rotate(135deg);
+}
+
+.button-close:hover::after {
+    transform: rotate(45deg);
+}
+
+/* Animation */
+
+.animation {
+    transition-property: all;
+    transition-duration: .5s;
+    transition-timing-function: ease;
+}
+
+/* Error */
+
+.error {
+    border: 1px solid red;
+}
+
+/* Success */
+
+.success {
+    border: 1px solid green;
+    background-color: transparent;
+}
+
+/* Form */
+
+form {
+    padding: 10px;
+    width: 350px;
+    margin: 0 auto;
+}
+
+form > div {
+    margin-bottom: 15px;
+}
+
+input,
+select {
+    height: 30px;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    max-width: 350px;
+    min-width: 350px;
+    font-size: 15px;
+}
+
+/*
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  background-color: transparent!important;
+}
+*/

@@ -1,0 +1,35 @@
+/* CONTENT */
+
+#content {
+    min-height: 800px;
+    padding-top: 80px;
+}
+
+#content div[class*='div'] {
+    padding: 1px;
+}
+
+#content .books {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1320px;
+    margin: 0 auto;
+}
+
+#content .books .book {
+    width: 200px;
+    margin: 10px;
+    background-color: aquamarine;
+}
+
+#content .books .book h3 {
+    margin: 15px;
+}
+
+#content .books .book img {
+    width: 100%;
+}
+
+#content .books .book p {
+    text-align: center;
+}

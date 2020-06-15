@@ -1,0 +1,56 @@
+#popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.54);
+    z-index: 1000;
+    align-items: center;
+    justify-content: center;
+}
+
+#popup.close {
+    z-index: -10;
+    display: none;
+}
+
+#popup.open {
+    z-index: 1000;
+    display: flex;
+}
+
+#popup > .container {
+    width: 500px;
+    min-height: 150px;
+    background-color: white;
+}
+
+/* Top */
+
+#popup .container .top {
+    min-height: 42px;
+}
+
+/* Content */
+
+#popup .container .content {
+    min-height: 150px;
+}
+
+#popup.loading .container .content {
+    position: relative;   
+}
+
+#popup.loading .container .content .container {
+    position: absolute;
+    height: 100%;    
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#popup.loading .container .content .container img {    
+    width: 100px;
+}

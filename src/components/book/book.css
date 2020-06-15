@@ -1,0 +1,28 @@
+#content {
+    margin: 20px;
+}
+
+#content .container .book h3 {
+    text-align: center;
+    font-size: 30px;
+}
+
+#content .container .book .book-info > div {
+    margin: 15px;
+}
+
+#content .container .book .book-info {
+    display: flex;
+}
+
+#content .container .book .book-info .book-img {
+    width: 300px;
+}
+
+#content .container .book .book-info .book-img img {
+    width: 100%;
+}
+
+#content .container .book .book-info .book-description {
+    width: calc(100% - 360px);
+}
