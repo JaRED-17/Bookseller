@@ -23,7 +23,7 @@ if (pathname) {
     appendComponent(pathname, $content);
 }
 else {
-    generateHtml();
+    generateMainPage();
 }
 hidePreloader();
 
@@ -58,7 +58,7 @@ function appendComponent(componentName, componentId, callback) {
     });    
 }
 
-function generateHtml() {
+function generateMainPage() {
     for (var i = 0; i < 256; i++) {
         var div = document.createElement('div');
         if (i == 0) {
@@ -93,10 +93,14 @@ function generateHtml() {
             ].join('');
             
         }
+
+        $contentContainer.append('<div id="searchbar"></div>');
         $contentContainer.append(['<div class="books">',
                                     books,
                                   '</div>'
                                 ].join(''));
+
+        appendComponent('searchbar', $('#searchbar'));
     });
 }
 

@@ -9,7 +9,8 @@
         "title": "Book 2",
         "img": "src/media/images/book.jpg",
         "cost": "124",
-        "description": "Some description"
+        "description": "Some description",
+        "genre": "Adventure"
     },
     "book3": {
         "title": "Book 3",
