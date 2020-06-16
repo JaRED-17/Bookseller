@@ -3,7 +3,8 @@
         "title": "Book 1",
         "img": "src/media/images/book.jpg",
         "cost": "124",
-        "description": "Some description"
+        "description": "Some description",
+        "genre": "Fantasy"
     },
     "book2": {
         "title": "Book 2",
@@ -16,96 +17,112 @@
         "title": "Book 3",
         "img": "src/media/images/book.jpg",
         "cost": "124",
-        "description": "Some description"
+        "description": "Some description",
+        "genre": "Fantasy"
     },
     "book4": {
         "title": "Book 4",
         "img": "src/media/images/book.jpg",
         "cost": "124",
-        "description": "Some description"
+        "description": "Some description",
+        "genre": "Adventure"
     },
     "book5": {
         "title": "Book 5",
         "img": "src/media/images/book.jpg",
         "cost": "124",
-        "description": "Some description"
+        "description": "Some description",
+        "genre": "Adventure"
     },
     "book6": {
         "title": "Book 6",
         "img": "src/media/images/book.jpg",
         "cost": "124",
-        "description": "Some description"
+        "description": "Some description",
+        "genre": "Adventure"
     },
     "book7": {
         "title": "Book 7",
         "img": "src/media/images/book.jpg",
         "cost": "124",
-        "description": "Some description"
+        "description": "Some description",
+        "genre": "Fantasy"
     },
     "book8": {
         "title": "Book 8",
         "img": "src/media/images/book.jpg",
         "cost": "124",
-        "description": "Some description"
+        "description": "Some description",
+        "genre": "Fantasy"
     },
     "book9": {
         "title": "Book 9",
         "img": "src/media/images/book.jpg",
         "cost": "124",
-        "description": "Some description"
+        "description": "Some description",
+        "genre": "Adventure"
     },
     "book10": {
         "title": "Book 10",
         "img": "src/media/images/book.jpg",
         "cost": "124",
-        "description": "Some description"
+        "description": "Some description",
+        "genre": "Fantasy"
     },
     "book11": {
         "title": "Book 11",
         "img": "src/media/images/book.jpg",
         "cost": "124",
-        "description": "Some description"
+        "description": "Some description",
+        "genre": "Adventure"
     },
     "book12": {
         "title": "Book 12",
         "img": "src/media/images/book.jpg",
         "cost": "124",
-        "description": "Some description"
+        "description": "Some description",
+        "genre": "Adventure"
     },
     "book13": {
         "title": "Book 13",
         "img": "src/media/images/book.jpg",
         "cost": "124",
-        "description": "Some description"
+        "description": "Some description",
+        "genre": "Fantasy"
     },
     "book14": {
         "title": "Book 14",
         "img": "src/media/images/book.jpg",
         "cost": "124",
-        "description": "Some description"
+        "description": "Some description",
+        "genre": "Adventure"
     },
     "book15": {
         "title": "Book 15",
         "img": "src/media/images/book.jpg",
         "cost": "124",
-        "description": "Some description"
+        "description": "Some description",
+        "genre": "Fantasy"
     },
     "book16": {
         "title": "Book 16",
         "img": "src/media/images/book.jpg",
         "cost": "124",
-        "description": "Some description"
+        "description": "Some description",
+        "genre": "Fantasy"
     },
     "book17": {
         "title": "Book 17",
         "img": "src/media/images/book.jpg",
         "cost": "124",
-        "description": "Some description"
+        "description": "Some description",
+        "genre": "Adventure"
     },
     "book18": {
         "title": "Book 18",
         "img": "src/media/images/book.jpg",
         "cost": "124",
-        "description": "Some description"
+        "description": "Some description",
+        "genre": "Adventure"
     }
 }
