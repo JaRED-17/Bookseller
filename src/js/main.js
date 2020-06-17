@@ -20,12 +20,11 @@ appendComponent('notification', $notification);
 appendComponent('popup', $popup);
 $(document).off().on('scroll', onScrollEvent);
 if (pathname) {
-    appendComponent(pathname, $content);
+    appendComponent(pathname, $content, hidePreloader);
 }
 else {
     generateMainPage();
 }
-hidePreloader();
 
 //HELPERS
 
@@ -102,6 +101,8 @@ function generateMainPage() {
 
         appendComponent('searchbar', $('#searchbar'));
     });
+
+    hidePreloader();
 }
 
 function getData() {
