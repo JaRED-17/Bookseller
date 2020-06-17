@@ -1,5 +1,7 @@
 var $searchButton = $('#searchbar .container .button.search'),
-    $resetButton = $('#searchbar .container .button.reset');
+    $resetButton = $('#searchbar .container .button.reset'),
+    $contentContainer = $('#content .container .books'),
+    $preloader = $('#preloader');
 
 $searchButton.off().on('click', function() {
     var data = $("#genre").val();
@@ -13,9 +15,11 @@ $resetButton.off().on('click', function() {
 //HELPERS
 
 function search(param) {
+    $contentContainer.html($preloader[0].innerHTML);
+    $contentContainer.addClass('loading');
+
     $.when(getData()).done(function (response) {
-        var books = [],
-            $contentContainer = $('#content .container .books');
+        var books = [];
 
         for (key in response) {
             if (param) {
@@ -45,11 +49,14 @@ function search(param) {
         }
 
         if (books) {
-            $contentContainer.html('');
-            $contentContainer.append(['<div class="books">',
-                                            books,
-                                      '</div>'
-                                    ].join(''));
+            setTimeout(function() { 
+                $contentContainer.html('');
+                $contentContainer.append(['<div class="books">',
+                                                books,
+                                            '</div>'
+                                        ].join(''));                                                   
+                $contentContainer.removeClass('loading');
+            }, 500);
         }
     });
 }

@@ -33,3 +33,13 @@
 #content .books .book p {
     text-align: center;
 }
+
+#content .books.loading {
+    min-height: 500px;
+    align-items: center;
+    justify-content: center;
+}
+
+#content .books.loading img {
+    width: 100px;
+}
