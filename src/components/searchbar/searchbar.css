@@ -1,0 +1,9 @@
+#searchbar #searchForm {
+    width: 615px;
+    height: 55px;
+}
+
+#searchbar #searchForm > div {
+    float: left;
+    margin: 10px;
+}
