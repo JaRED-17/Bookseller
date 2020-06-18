@@ -1,6 +1,5 @@
 var $searchButton = $('#searchbar .container .button.search'),
     $resetButton = $('#searchbar .container .button.reset'),
-    $booksContainer = $('#content .container #books'),
     $preloader = $('#preloader');
 
 $searchButton.off().on('click', function() {
@@ -15,6 +14,7 @@ $resetButton.off().on('click', function() {
 //HELPERS
 
 function search(param) {
+    var $booksContainer = $('#content #books .container');
     $booksContainer.html($preloader[0].innerHTML);
     $booksContainer.addClass('loading');
 
