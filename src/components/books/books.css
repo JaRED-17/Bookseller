@@ -1,6 +1,11 @@
+#content #books {
+    width: 100%;
+}
+
 #content #books .container {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     max-width: 1320px;
     margin: 0 auto;
 }
