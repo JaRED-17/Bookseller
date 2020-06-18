@@ -1,6 +1,21 @@
 var $sliderContainer = $('#content .container #slider .container');
 
-generateSlider();
+//generateSlider();
+
+var swiper = new Swiper('.swiper-container', {
+    cssMode: true,
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+    pagination: {
+        el: '.swiper-pagination'
+    },
+    mousewheel: true,
+    keyboard: true,
+});
+
+console.log(swiper);
 
 //HELPERS
 
