@@ -1,6 +1,6 @@
 var $searchButton = $('#searchbar .container .button.search'),
     $resetButton = $('#searchbar .container .button.reset'),
-    $contentContainer = $('#content .container .books'),
+    $booksContainer = $('#content .container #books'),
     $preloader = $('#preloader');
 
 $searchButton.off().on('click', function() {
@@ -15,8 +15,8 @@ $resetButton.off().on('click', function() {
 //HELPERS
 
 function search(param) {
-    $contentContainer.html($preloader[0].innerHTML);
-    $contentContainer.addClass('loading');
+    $booksContainer.html($preloader[0].innerHTML);
+    $booksContainer.addClass('loading');
 
     $.when(getData()).done(function (response) {
         var books = [];
@@ -50,12 +50,9 @@ function search(param) {
 
         if (books) {
             setTimeout(function() { 
-                $contentContainer.html('');
-                $contentContainer.append(['<div class="books">',
-                                                books,
-                                            '</div>'
-                                        ].join(''));                                                   
-                $contentContainer.removeClass('loading');
+                $booksContainer.html('');
+                $booksContainer.append(books);                                                   
+                $booksContainer.removeClass('loading');
             }, 500);
         }
     });

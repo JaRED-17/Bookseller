@@ -1,0 +1,3 @@
+#content div[class*='div'] {
+    padding: 1px;
+}
