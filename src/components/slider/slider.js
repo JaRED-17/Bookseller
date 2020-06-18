@@ -4,7 +4,7 @@ var $sliderContainer = $('#content .container #slider .container');
 
 var swiper = new Swiper('.swiper-container', {
     slidesPerView: 1,
-    spaceBetween: 30,
+    spaceBetween: 0,
     loop: true,
     autoplay: {
         delay: 2500,
