@@ -3,19 +3,22 @@ var $sliderContainer = $('#content .container #slider .container');
 //generateSlider();
 
 var swiper = new Swiper('.swiper-container', {
-    cssMode: true,
-    navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
+    slidesPerView: 1,
+    spaceBetween: 30,
+    loop: true,
+    autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
     },
     pagination: {
-        el: '.swiper-pagination'
+      el: '.swiper-pagination',
+      clickable: true,
     },
-    mousewheel: true,
-    keyboard: true,
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
 });
-
-console.log(swiper);
 
 //HELPERS
 
