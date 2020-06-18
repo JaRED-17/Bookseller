@@ -1,7 +1,7 @@
 /* PRELOADER */
 
 #preloader {
-    position: absolute;
+    position: fixed;
     display: none;
     top: 0;
     width: 100vw;
