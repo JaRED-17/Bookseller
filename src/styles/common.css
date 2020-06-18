@@ -17,13 +17,13 @@ body {
     font-size: 18px;
     border-radius: 10px;
     text-align: center;    
-    background-color: blue;
-    color: red; 
-    padding: 5px 20px;   
+    background-color: #43f1e0;
+    color: black; 
+    padding: 5px 20px;
 }
 
 .button:hover {
-    background-color: lightblue;
+    background-color: #b8f5ef;
     cursor: pointer;
 }
 
