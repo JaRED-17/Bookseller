@@ -15,7 +15,7 @@ body {
     display: block;
     width: max-content;
     font-size: 18px;
-    border-radius: 10px;
+    border-radius: 10px 3px 10px 3px;
     text-align: center;    
     background-color: #43f1e0;
     color: black; 

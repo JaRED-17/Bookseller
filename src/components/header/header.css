@@ -38,15 +38,20 @@
 
 /* Left */
 
-/*
-#header .container .header_left {
-    display: flex;
-    align-items: center;
+#header .container .header_left .button .bar {
+    width: 20px;
+    height: 2px;
+    margin: 5px 0;
+    background-color: #217b21;
+    transition: all .2s ease;
 }
-*/
 
-#header .container .header_left .button {
-    margin-left: 10px;
+#header .container .header_left .button:hover .bar:first-child {
+    transform: rotate(-10deg);
+}
+
+#header .container .header_left .button:hover .bar:last-child {
+    transform: rotate(10deg);
 }
 
 /* Center */
