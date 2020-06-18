@@ -38,6 +38,10 @@
 
 /* Left */
 
+#header .container .header_left .button {
+    padding: 5px 10px;
+}
+
 #header .container .header_left .button .bar {
     width: 20px;
     height: 2px;
