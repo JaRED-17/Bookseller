@@ -1,12 +1,11 @@
-var $booksContainer = $('#content #books .container');
-
 getBooks();
 
 //HELPERS
 
 function getBooks() {
     $.when(getData()).done(function (response) {
-        var books = [];
+        var books = [],
+            $booksContainer = $('#content #books .container');
 
         for (key in response) {
             books += [
