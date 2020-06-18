@@ -44,10 +44,21 @@ function getComponent(name) {
 }
 
 function appendComponent(componentName, componentId, callback) {
+    var allowDoubleUploadFor = ['login'];
     callback = callback || function () {};
 
     if (window['component' + componentName + 'hasBeenAdded']) {
-        callback();
+        if (allowDoubleUploadFor.indexOf(componentName) == -1) {
+            callback();
+        }
+        else {
+            $.when(getComponent(componentName)).done(function (response) {
+                if (response) {
+                    $(componentId).html(response);
+                    callback();
+                }
+            });
+        }
     }
     else {
         includeElementAsync("src/components/" + componentName + "/" + componentName + ".css", 'link', function () {
