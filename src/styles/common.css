@@ -47,7 +47,6 @@ body {
     top: calc(50%);
     transform: rotate(45deg);
     transition: .2s ease-out;
-    -webkit-backface-visibility: hidden;
 }
 
 .button-close::after {
