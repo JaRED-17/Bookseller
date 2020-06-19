@@ -3,6 +3,7 @@
 body {
     margin: 0;
     min-width: 360px;
+    background: url(/src/media/images/background.jpg) no-repeat fixed 100%/100%;
 }
 
 .no-overflow {
