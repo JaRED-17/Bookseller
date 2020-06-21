@@ -3,6 +3,4 @@
 #content {
     min-height: 800px;
     padding-top: 80px;
-    background-image: url('/src/media/images/background.jpg');
-    background-size: cover;
 }
