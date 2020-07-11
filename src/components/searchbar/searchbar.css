@@ -1,9 +1,16 @@
 #searchbar #searchForm {
-    width: 615px;
+    width: max-content;
     height: 55px;
 }
 
 #searchbar #searchForm > div {
     float: left;
     margin: 10px;
+}
+
+@media (max-width: 1020px) {
+    #searchbar #searchForm {
+        width: min-content;
+        height: 150px;
+    }
 }
