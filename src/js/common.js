@@ -10,21 +10,26 @@ var $body = $('body'),
     $popup = $('#popup');
 
 var url = new URL(window.location.href),
-    pathname = url.pathname.replace(/\//g,'');
+    pathname = url.pathname.replace(/\//g,''),
+    componentsData = {};
 
-appendComponent('preloader', $preloader, showPreloader);
-appendComponent('header', $header);
-appendComponent('sidebar', $sidebar);
-appendComponent('footer', $footer);
-appendComponent('notification', $notification);
-appendComponent('popup', $popup);
-$(document).off().on('scroll', onScrollEvent);
-if (pathname) {
-    appendComponent(pathname, $content, hidePreloader);
-}
-else {
-    appendComponent('main', $content, hidePreloader);
-}
+$.when(getData('components')).done(function (response) {
+    componentsData = response;
+
+    appendComponent('preloader', $preloader, showPreloader);
+    appendComponent('header', $header);
+    appendComponent('sidebar', $sidebar);
+    appendComponent('footer', $footer);
+    appendComponent('notification', $notification);
+    appendComponent('popup', $popup);
+    $(document).off().on('scroll', onScrollEvent);
+    if (pathname) {
+        appendComponent(pathname, $content, hidePreloader);
+    }
+    else {
+        appendComponent('main', $content, hidePreloader);
+    }
+});
 
 //HELPERS
 
@@ -44,7 +49,9 @@ function getComponent(name) {
 }
 
 function appendComponent(componentName, componentId, callback) {
-    var allowDoubleUploadFor = ['login'];
+    var allowDoubleUploadFor = ['login'],
+        componentData = componentsData[componentName];
+
     callback = callback || function () {};
 
     if (window['component' + componentName + 'hasBeenAdded']) {
@@ -52,37 +59,52 @@ function appendComponent(componentName, componentId, callback) {
             callback();
         }
         else {
-            $.when(getComponent(componentName)).done(function (response) {
-                if (response) {
-                    $(componentId).html(response);
-                    callback();
-                }
-            });
+            if (isItExist(componentData, 'html')) {
+                $.when(getComponent(componentName)).done(function (response) {
+                    if (response) {
+                        $(componentId).html(response);
+                        callback();
+                    }
+                });
+            }
         }
     }
     else {
-        includeElementAsync("src/components/" + componentName + "/" + componentName + ".css", 'link', function () {
-            $.when(getComponent(componentName)).done(function (response) {
-                if (response) {
-                    $(componentId).html(response);
-                    callback();
-                    includeElementAsync("src/components/" + componentName + "/" + componentName + ".js", 'script');
-                }
-            });
-        });
+        var proceedCallback = function () {
+            if (isItExist(componentData, 'html')) {
+                $.when(getComponent(componentName)).done(function (response) {
+                    if (response) {
+                        $(componentId).html(response);
+                        callback();
+                        if (isItExist(componentData, 'js')) {
+                            includeElementAsync("src/components/" + componentName + "/" + componentName + ".js", 'script');
+                        }
+                    }
+                });
+            }
+        };
+
+        if (isItExist(componentData, 'css')) {
+            includeElementAsync("src/components/" + componentName + "/" + componentName + ".css", 'link', proceedCallback); 
+        }
+        else {
+            proceedCallback();     
+        }
         window['component' + componentName + 'hasBeenAdded'] = true;
     }
 }
 
-function getData() {
+function getData(fileName) {
+    var fileName = fileName || "books";
+
     return $.ajax({
-        url: "src/data/books.json",
+        url: "src/data/" + fileName + ".json",
         dataType: "json",
         success: function(response) {
             return response;
         },
         error: function() {
-            console.log('a request has been failed: data.json');
+            console.log('a request has been failed: ' + fileName + '.json');
         }
     });   
 }
@@ -95,6 +117,13 @@ function onScrollEvent() {
     else {
         $header.addClass('scrolled');
     }
+}
+
+function isItExist(array, name) {
+    if (array) {
+        return array.indexOf(name) != -1;
+    }
+    else return true;    
 }
 
 //Preloader

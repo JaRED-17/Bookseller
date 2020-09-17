@@ -26,7 +26,6 @@ $submitButton.off().on('click', function() {
     if (!hasError) {
         showPreloader();
         var data = $("#contactForm").serialize({});
-        console.log(data);
         for (var i = 0; i < fields.length; i++) {
             var $field = $('#contact_' + fields[i]);
             $field.removeClass('success');
