@@ -24,8 +24,6 @@ function search(genre, searchWord) {
         var books = [],
             regex = new RegExp(searchWord, );
 
-        console.log(searchWord === '');
-
         for (key in response) {
             if (genre || searchWord) {
                 if (genre !== '' && searchWord === '') {
