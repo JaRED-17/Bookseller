@@ -3,7 +3,8 @@ var $body = $('body'),
     $login = $('#header .header_right .button'),
     $loginContent = $('#popup .container .content'),
     $sidebarOpenButton = $('#header .header_left .button'),
-    $preloader = $('#preloader');
+    $preloader = $('#preloader'),
+    $languageSelector = $('#language');
 
 addEventHandlerForOpeningSidebar();
 
@@ -29,6 +30,13 @@ $login.off().on('click', function() {
     setTimeout(function() {
         appendComponent('login', $loginContent, function() {
             $('#popup').removeClass('loading');
+            translateComponent('login', getSelectedLanguage());
         });
     }, 500)
 });
+
+$languageSelector.off().on('change', function() {
+    translateAll();
+});
+
+translateComponent('login', getSelectedLanguage());

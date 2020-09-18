@@ -68,3 +68,5 @@ function bookHtml(book, key) {
         '</div>'
     ];
 }
+
+translateComponent('searchbar', getSelectedLanguage());

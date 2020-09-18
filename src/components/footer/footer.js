@@ -1,0 +1,1 @@
+translateComponent('footer', getSelectedLanguage());

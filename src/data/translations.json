@@ -1,0 +1,62 @@
+{
+    "login": {
+        "ru": {
+            "login": "Логин",
+            "password": "Пароль",
+            "button_login": "Войти"
+        },
+        "en": {
+            "login": "Login",
+            "password": "Password",
+            "button_login": "Login"
+        }
+    },
+    "header": {
+        "ru": {
+            "header_login": "Логин"
+        },
+        "en": {
+            "header_login": "Login"
+        }
+    },
+    "sidebar": {
+        "ru": {
+            "main": "Главная",
+            "about_us": "О нас",
+            "support": "Обратная связь"
+        },
+        "en": {
+            "main": "Main page",
+            "about_us": "About us",
+            "support": "Support"           
+        }
+    },
+    "footer": {
+        "ru": {
+            "footer_about_us": "О нас",
+            "footer_support": "Обратная связь",
+            "footer_all_right_reserved": "Все права защищены" 
+        },
+        "en": {
+            "footer_about_us": "About us",
+            "footer_support": "Support",
+            "footer_all_right_reserved": "All right reserved"
+        }
+    },
+    "searchbar": {
+        "ru": {
+            "searchbar_option_default": "Не учитывать",
+            "searchbar_option_adventure": "Приключения",
+            "searchbar_option_fantasy": "Фантистика",
+            "searchbar_button_search": "Поиск",
+            "searchbar_button_reset": "Сбросить"
+        },
+        "en": {
+            "searchbar_option_default": "Do not use",
+            "searchbar_option_adventure": "Adventure",
+            "searchbar_option_fantasy": "Fantasy",
+            "searchbar_button_search": "Search",
+            "searchbar_button_reset": "Reset"
+        }
+    }
+}

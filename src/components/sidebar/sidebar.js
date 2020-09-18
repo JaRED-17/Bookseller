@@ -23,3 +23,5 @@ function closeSideBar() {
         },500);
     }
 }
+
+translateComponent('sidebar', getSelectedLanguage());

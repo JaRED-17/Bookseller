@@ -7,14 +7,18 @@ var $body = $('body'),
     $preloader = $('#preloader'),
     $content = $('#content'),
     $notification = $('#notification'),
-    $popup = $('#popup');
+    $popup = $('#popup'),
+    $languageSelector = $('#language');
 
 var url = new URL(window.location.href),
     pathname = url.pathname.replace(/\//g,''),
-    componentsData = {};
+    componentsData = {},
+    defaultLanguage = 'en',
+    allTranslations = {};
 
-$.when(getData('components')).done(function (response) {
-    componentsData = response;
+$.when(getData('components'), getTranslations()).done(function (response, translations) {
+    componentsData = response[0];
+    allTranslations = translations[0];
 
     appendComponent('preloader', $preloader, showPreloader);
     appendComponent('header', $header);
@@ -29,6 +33,7 @@ $.when(getData('components')).done(function (response) {
     else {
         appendComponent('main', $content, hidePreloader);
     }
+    //translateAll();
 });
 
 //HELPERS
@@ -59,7 +64,7 @@ function appendComponent(componentName, componentId, callback) {
             callback();
         }
         else {
-            if (isItExist(componentData, 'html')) {
+            if (shouldItbeAdded(componentData, 'html')) {
                 $.when(getComponent(componentName)).done(function (response) {
                     if (response) {
                         $(componentId).html(response);
@@ -71,12 +76,12 @@ function appendComponent(componentName, componentId, callback) {
     }
     else {
         var proceedCallback = function () {
-            if (isItExist(componentData, 'html')) {
+            if (shouldItbeAdded(componentData, 'html')) {
                 $.when(getComponent(componentName)).done(function (response) {
                     if (response) {
                         $(componentId).html(response);
                         callback();
-                        if (isItExist(componentData, 'js')) {
+                        if (shouldItbeAdded(componentData, 'js')) {
                             includeElementAsync("src/components/" + componentName + "/" + componentName + ".js", 'script');
                         }
                     }
@@ -84,7 +89,7 @@ function appendComponent(componentName, componentId, callback) {
             }
         };
 
-        if (isItExist(componentData, 'css')) {
+        if (shouldItbeAdded(componentData, 'css')) {
             includeElementAsync("src/components/" + componentName + "/" + componentName + ".css", 'link', proceedCallback); 
         }
         else {
@@ -119,7 +124,7 @@ function onScrollEvent() {
     }
 }
 
-function isItExist(array, name) {
+function shouldItbeAdded(array, name) {
     if (array) {
         return array.indexOf(name) != -1;
     }
@@ -179,4 +184,32 @@ function showNotification(message) {
             $notification.removeClass('open');
         }, 6000);
     }    
+}
+
+//Translations
+
+function getTranslations() {
+    return getData('translations');
+}
+
+function translateComponent(name, language) {
+    var language = language || defaultLanguage,
+        componentTranslation = allTranslations[name][language];
+
+    for (key in componentTranslation) {
+        $('*[translate_code=' + key + ']').text(componentTranslation[key]);            
+    }
+}
+
+function getSelectedLanguage() {
+    return $languageSelector.val() || defaultLanguage;
+}
+
+function translateAll() {
+    var language = getSelectedLanguage();
+
+    translateComponent('header', language);
+    translateComponent('sidebar', language);
+    translateComponent('footer', language);
+    translateComponent('searchbar', language);
 }
