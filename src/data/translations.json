@@ -76,5 +76,13 @@
             "support_message": "Message",
             "support_button_send": "Send"
         }
+    },
+    "about-us": {
+        "ru": {
+            "about_us": "О нас"
+        },
+        "en": {
+            "about_us": "About us"
+        }
     }
 }
