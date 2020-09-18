@@ -211,6 +211,9 @@ function translateAll() {
     translateComponent('sidebar');
     translateComponent('footer');
     translateComponent('searchbar');
+    if (pathname) {
+        translateComponent(pathname);    
+    }
 }
 
 function setCurrentLanguage() {

@@ -58,5 +58,23 @@
             "searchbar_button_search": "Search",
             "searchbar_button_reset": "Reset"
         }
+    },
+    "support": {
+        "ru": {
+            "support_first_name": "Имя",
+            "support_last_name": "Фамилия",
+            "support_email": "Электронная почта",
+            "support_subject": "Тема",
+            "support_message": "Сообщение",
+            "support_button_send": "Отправить"
+        },
+        "en": {
+            "support_first_name": "First Name",
+            "support_last_name": "Last Name",
+            "support_email": "Email",
+            "support_subject": "Subject",
+            "support_message": "Message",
+            "support_button_send": "Send"
+        }
     }
 }

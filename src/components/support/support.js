@@ -37,3 +37,5 @@ $submitButton.off().on('click', function() {
         },1000);        
     }
 });
+
+translateComponent('support');
