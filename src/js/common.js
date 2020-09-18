@@ -14,12 +14,14 @@ var url = new URL(window.location.href),
     pathname = url.pathname.replace(/\//g,''),
     componentsData = {},
     defaultLanguage = 'en',
+    currentLanguage = 'en',
     allTranslations = {};
 
 $.when(getData('components'), getTranslations()).done(function (response, translations) {
     componentsData = response[0];
     allTranslations = translations[0];
 
+    setCurrentLanguage();
     appendComponent('preloader', $preloader, showPreloader);
     appendComponent('header', $header);
     appendComponent('sidebar', $sidebar);
@@ -192,9 +194,8 @@ function getTranslations() {
     return getData('translations');
 }
 
-function translateComponent(name, language) {
-    var language = language || defaultLanguage,
-        componentTranslation = allTranslations[name][language];
+function translateComponent(name) {
+    var componentTranslation = allTranslations[name][currentLanguage];
 
     for (key in componentTranslation) {
         $('*[translate_code=' + key + ']').text(componentTranslation[key]);            
@@ -206,10 +207,27 @@ function getSelectedLanguage() {
 }
 
 function translateAll() {
-    var language = getSelectedLanguage();
+    translateComponent('header');
+    translateComponent('sidebar');
+    translateComponent('footer');
+    translateComponent('searchbar');
+}
 
-    translateComponent('header', language);
-    translateComponent('sidebar', language);
-    translateComponent('footer', language);
-    translateComponent('searchbar', language);
+function setCurrentLanguage() {
+    currentLanguage = getCookie('language') || getSelectedLanguage() || defaultLanguage;
+}
+
+//Cookie
+
+function setCookie(name, value) {
+    date = new Date(Date.now() + 86400e3);
+    date = date.toUTCString();
+    document.cookie = name + "=" + value + "; expires=" + date;
+}
+
+function getCookie(name) {
+    var matches = document.cookie.match(new RegExp(
+      "(?:^|; )" + name.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1') + "=([^;]*)"
+    ));
+    return matches ? decodeURIComponent(matches[1]) : undefined;
 }

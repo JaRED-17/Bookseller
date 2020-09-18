@@ -1,1 +1,1 @@
-translateComponent('footer', getSelectedLanguage());
+translateComponent('footer');

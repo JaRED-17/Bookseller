@@ -69,4 +69,4 @@ function bookHtml(book, key) {
     ];
 }
 
-translateComponent('searchbar', getSelectedLanguage());
+translateComponent('searchbar');

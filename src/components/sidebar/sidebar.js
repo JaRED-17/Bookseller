@@ -24,4 +24,4 @@ function closeSideBar() {
     }
 }
 
-translateComponent('sidebar', getSelectedLanguage());
+translateComponent('sidebar');

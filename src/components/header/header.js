@@ -30,13 +30,17 @@ $login.off().on('click', function() {
     setTimeout(function() {
         appendComponent('login', $loginContent, function() {
             $('#popup').removeClass('loading');
-            translateComponent('login', getSelectedLanguage());
+            translateComponent('login');
         });
     }, 500)
 });
 
 $languageSelector.off().on('change', function() {
+    setCookie('language', getSelectedLanguage());
+    setCurrentLanguage();
     translateAll();
 });
 
-translateComponent('login', getSelectedLanguage());
+$languageSelector.val(currentLanguage);
+
+translateComponent('header');
