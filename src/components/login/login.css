@@ -1,0 +1,9 @@
+.error {
+    color: red;
+    width: 350px;
+    margin: 0 auto;
+}
+
+.error p {
+    margin: 10px;
+}

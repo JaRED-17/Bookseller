@@ -21,6 +21,10 @@ app.get('/book', function (req, res) {
   res.sendFile(path.join(__dirname + '/src/index.html'));
 });
 
+app.get('/my-account', function (req, res) {
+  res.sendFile(path.join(__dirname + '/src/index.html'));
+});
+
 app.listen(3000, function () {
   console.log('Application is running at http://localhost:3000');
 });

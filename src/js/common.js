@@ -239,3 +239,27 @@ function getCookie(name) {
     ));
     return matches ? decodeURIComponent(matches[1]) : undefined;
 }
+
+//Login
+
+function login(login, password, $message) {
+    var result = false;
+
+    $.when(getData('users')).done(function(response) {
+        for (key in response) {
+            if (response[key].login == login && response[key].password == password) {
+                setCookie('login',true);
+                result = true;
+            }            
+        }
+        
+        if (result) {
+            $message.hide();
+            window.location.href = 'my-account';
+        }
+        else {
+            $message.find('p').text('Cannot login');
+            $message.show();
+        }
+    });    
+}

@@ -1,13 +1,14 @@
 <div class="container">
-    <form action="">
+    <div class="message error" style="display: none;"><p></p></div>
+    <form action="">        
         <div>
             <label translate_code="login">Логин</label>
-            <input type="text"><br>
+            <input id="login" type="text">
         </div>
         <div>
             <label translate_code="password">Пароль</label>
-            <input type="password">
+            <input id="password" type="password">
         </div>
-        <div class="button" translate_code="button_login">Login</div>
+        <div id="submit" class="button" translate_code="button_login">Login</div>
     </form>
 </div>
