@@ -1,5 +1,6 @@
 #content #books {
     width: 100%;
+    display: flex;
 }
 
 #content #books .container {
