@@ -88,5 +88,13 @@
         "en": {
             "about_us": "About us"
         }
+    },
+    "my-account": {
+        "ru": {
+            "my-account": "Мой аккаунт"
+        },
+        "en": {
+            "my-account": "My account"
+        }
     }
 }
