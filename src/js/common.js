@@ -198,7 +198,12 @@ function translateComponent(name) {
     var componentTranslation = allTranslations[name][currentLanguage];
 
     for (key in componentTranslation) {
-        $('*[translate_code=' + key + ']').text(componentTranslation[key]);            
+        var $elem = $('*[translate_code=' + key + ']');
+
+        if ($elem.attr('placeholder')) {
+            $elem.attr('placeholder', componentTranslation[key]);  
+        }
+        else $elem.text(componentTranslation[key]);            
     }
 }
 

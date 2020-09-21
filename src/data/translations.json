@@ -49,14 +49,16 @@
             "searchbar_option_adventure": "Приключения",
             "searchbar_option_fantasy": "Фантистика",
             "searchbar_button_search": "Поиск",
-            "searchbar_button_reset": "Сбросить"
+            "searchbar_button_reset": "Сбросить",
+            "searchbar_placeholder_search": "Искать"
         },
         "en": {
             "searchbar_option_default": "Do not use",
             "searchbar_option_adventure": "Adventure",
             "searchbar_option_fantasy": "Fantasy",
             "searchbar_button_search": "Search",
-            "searchbar_button_reset": "Reset"
+            "searchbar_button_reset": "Reset",
+            "searchbar_placeholder_search": "Search"
         }
     },
     "support": {
