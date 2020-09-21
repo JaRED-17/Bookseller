@@ -10,6 +10,10 @@ body {
     overflow: hidden;
 }
 
+.container {
+    min-width: 360px;
+}
+
 /* Buttons */
 
 .button {    
@@ -95,6 +99,10 @@ form > div {
     margin-bottom: 15px;
 }
 
+form > div > label + * {
+    margin-top: 5px;
+}
+
 input,
 select {
     height: 30px;
@@ -109,7 +117,6 @@ textarea {
     font-size: 15px;
     padding: 5px 10px;
     border-width: 0px;
-    margin-top: 5px;
     border-radius: 10px 3px 10px 3px;
     background-color: #43f1e0;
 }
