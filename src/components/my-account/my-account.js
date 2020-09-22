@@ -1,3 +1,7 @@
+var $title = $('head title');
+
+$title.html('My account | Bookseller');
+
 if (userIsLoggedIn) {
     translateComponent('my-account');
     $.when(getUserData()).done(function(response) {
