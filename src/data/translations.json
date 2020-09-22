@@ -95,10 +95,16 @@
     },
     "my-account": {
         "ru": {
-            "my-account": "Мой аккаунт"
+            "my-account": "Мой аккаунт",
+            "my-account_first_name": "Имя",
+            "my-account_last_name": "Фамилия",
+            "my-account_email": "Электронная почта"
         },
         "en": {
-            "my-account": "My account"
+            "my-account": "My account",
+            "my-account_first_name": "First Name",
+            "my-account_last_name": "Last Name",
+            "my-account_email": "Email"
         }
     }
 }

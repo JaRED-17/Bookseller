@@ -1,6 +1,11 @@
 {
     "user1": {
         "login": "igor.borozdov@gmail.com",
-        "password": "aA123456"
+        "password": "aA123456",
+        "data": {
+            "firstName": "Igor",
+            "lastName": "Borozdov",
+            "email": "igor.borozdov@gmail.com"
+        }
     }
 }

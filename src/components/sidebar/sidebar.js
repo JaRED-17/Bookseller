@@ -28,7 +28,6 @@ function closeSideBar() {
 $logout.off().on('click', function() {
     setCookie('isLoggedIn', false);
     window.location.href = '/';
-        
 });
 
 translateComponent('sidebar');

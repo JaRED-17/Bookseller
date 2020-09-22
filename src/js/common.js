@@ -269,3 +269,7 @@ function login(login, password, $message) {
         }
     });    
 }
+
+function getUserData() {
+    return getData('users');
+}
