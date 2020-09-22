@@ -15,11 +15,17 @@ var url = new URL(window.location.href),
     componentsData = {},
     defaultLanguage = 'en',
     currentLanguage = 'en',
-    allTranslations = {};
+    allTranslations = {},
+    userIsLoggedIn = false;
 
 $.when(getData('components'), getTranslations()).done(function (response, translations) {
     componentsData = response[0];
     allTranslations = translations[0];
+    
+    if (getCookie('isLoggedIn') == 'true') {
+        userIsLoggedIn = true    
+    }
+    else userIsLoggedIn = false;
 
     setCurrentLanguage();
     appendComponent('preloader', $preloader, showPreloader);
@@ -248,7 +254,7 @@ function login(login, password, $message) {
     $.when(getData('users')).done(function(response) {
         for (key in response) {
             if (response[key].login == login && response[key].password == password) {
-                setCookie('login',true);
+                setCookie('isLoggedIn',true);
                 result = true;
             }            
         }

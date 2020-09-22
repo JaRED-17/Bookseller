@@ -1,7 +1,8 @@
 var $body = $('body'),
     $sidebar = $('#sidebar'),
     $background = $('#sidebar .background');
-    $sidebarCloseButton = $('#sidebar .top .button-close');
+    $sidebarCloseButton = $('#sidebar .top .button-close'),
+    $logout = $('#sidebar .bottom .button.logout'),
 
 addEventHandlerForClosingSidebar();
 
@@ -24,4 +25,14 @@ function closeSideBar() {
     }
 }
 
+$logout.off().on('click', function() {
+    setCookie('isLoggedIn', false);
+    window.location.href = '/';
+        
+});
+
 translateComponent('sidebar');
+
+if (!userIsLoggedIn) {
+    $logout.remove();
+}

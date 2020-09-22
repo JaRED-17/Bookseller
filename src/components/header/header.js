@@ -1,6 +1,7 @@
 var $body = $('body'),
     $sidebar = $('#sidebar'),
-    $login = $('#header .header_right .button'),
+    $login = $('#header .header_right .button.login'),
+    $logout = $('#header .header_right .button.logout'),
     $loginContent = $('#popup .container .content'),
     $sidebarOpenButton = $('#header .header_left .button'),
     $preloader = $('#preloader'),
@@ -35,6 +36,12 @@ $login.off().on('click', function() {
     }, 500)
 });
 
+$logout.off().on('click', function() {
+    setCookie('isLoggedIn', false);
+    window.location.href = '/';
+        
+});
+
 $languageSelector.off().on('change', function() {
     setCookie('language', getSelectedLanguage());
     setCurrentLanguage();
@@ -44,3 +51,10 @@ $languageSelector.off().on('change', function() {
 $languageSelector.val(currentLanguage);
 
 translateComponent('header');
+
+if (userIsLoggedIn) {
+    $login.remove();    
+}
+else {
+    $logout.remove(); 
+}

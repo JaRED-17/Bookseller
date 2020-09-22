@@ -66,3 +66,12 @@
     color: red;
     cursor: pointer;
 }
+
+/* Bottom */
+
+#sidebar .container .bottom {
+    position: absolute;
+    bottom: 0;
+    margin-left: 40px;
+    width: auto!important;
+}

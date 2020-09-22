@@ -13,22 +13,26 @@
     },
     "header": {
         "ru": {
-            "header_login": "Логин"
+            "header_login": "Войти",
+            "header_logout": "Выйти"
         },
         "en": {
-            "header_login": "Login"
+            "header_login": "Login",
+            "header_logout": "Logout"
         }
     },
     "sidebar": {
         "ru": {
             "main": "Главная",
             "about_us": "О нас",
-            "support": "Обратная связь"
+            "support": "Обратная связь",
+            "sidebar_logout": "Выйти"
         },
         "en": {
             "main": "Main page",
             "about_us": "About us",
-            "support": "Support"           
+            "support": "Support",
+            "sidebar_logout": "Logout"
         }
     },
     "footer": {
