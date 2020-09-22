@@ -4,7 +4,6 @@ var $submitButton = $('#content #contactForm .button'),
 $title.html('Contact us | Bookseller');   
 
 $submitButton.off().on('click', function() {
-    event.preventDefault();
     var hasError = false,
         fields = ['firstName','lastName','email', 'subject','message'];
 
@@ -39,3 +38,11 @@ $submitButton.off().on('click', function() {
 });
 
 translateComponent('support');
+
+if (userIsLoggedIn) {
+    $.when(getUserData()).done(function(response) {
+        for (key in response.user1.data) {
+            $('#contact_' + key).val(response.user1.data[key]);
+        }
+    });   
+}
