@@ -92,3 +92,44 @@
     height: 33px;
     min-width: initial;
 }
+
+#header .container .header_right .user_panel {
+    position: relative;
+}
+
+#header .container .header_right .user_details {
+    position: absolute;
+    background-color: white;
+    padding: 10px;
+    right: 0px;
+    top: 40px;
+}
+
+#header .container .header_right .user_details::before {
+    content: '';    
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    top: -5px;
+    right: 15px;
+    background-color: white;    
+    transform: rotate(45deg);
+}
+
+#header .container .header_right .close .user_details {
+    display: none;
+}
+
+#header .container .header_right .open .user_details {
+    display: block;
+}
+
+#header .container .header_right .button.toggle {
+    height: 23px;
+    padding: 5px 10px;
+}
+
+#header .container .header_right .button.toggle:before {
+    position: relative;
+    top: 2px;
+}

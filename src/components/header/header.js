@@ -5,7 +5,10 @@ var $body = $('body'),
     $loginContent = $('#popup .container .content'),
     $sidebarOpenButton = $('#header .header_left .button'),
     $preloader = $('#preloader'),
-    $languageSelector = $('#language');
+    $languageSelector = $('#language'),
+    $userPanel = $('#header .header_right .user_panel'),
+    $userDetails = $('#header .header_right .user_details'),
+    $toggleUserPanelButton = $('#header .header_right .user_panel .button.toggle');
 
 addEventHandlerForOpeningSidebar();
 
@@ -38,14 +41,24 @@ $login.off().on('click', function() {
 
 $logout.off().on('click', function() {
     setCookie('isLoggedIn', false);
-    window.location.href = '/';
-        
+    window.location.href = '/';        
 });
 
 $languageSelector.off().on('change', function() {
     setCookie('language', getSelectedLanguage());
     setCurrentLanguage();
     translateAll();
+});
+
+$toggleUserPanelButton.off().on('click', function() {
+    if ($userPanel.hasClass('open')) {
+        $userPanel.removeClass('open');
+        $userPanel.addClass('close');
+    }
+    else {
+        $userPanel.removeClass('close');
+        $userPanel.addClass('open');        
+    }
 });
 
 $languageSelector.val(currentLanguage);
@@ -56,5 +69,5 @@ if (userIsLoggedIn) {
     $login.remove();    
 }
 else {
-    $logout.remove(); 
+    $userPanel.remove(); 
 }

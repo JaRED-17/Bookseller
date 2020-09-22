@@ -14,11 +14,13 @@
     "header": {
         "ru": {
             "header_login": "Войти",
-            "header_logout": "Выйти"
+            "header_logout": "Выйти",
+            "header_my_account": "Мой аккаунт"
         },
         "en": {
             "header_login": "Login",
-            "header_logout": "Logout"
+            "header_logout": "Logout",
+            "header_my_account": "My account"
         }
     },
     "sidebar": {
