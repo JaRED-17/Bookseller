@@ -8,7 +8,8 @@ var $body = $('body'),
     $languageSelector = $('#language'),
     $userPanel = $('#header .header_right .user_panel'),
     $userDetails = $('#header .header_right .user_details'),
-    $toggleUserPanelButton = $('#header .header_right .user_panel .button.toggle');
+    $toggleUserPanelButton = $('#header .header_right .user_panel .button.toggle'),
+    $userPanelBackground = $('#header .header_right .background');
 
 addEventHandlerForOpeningSidebar();
 
@@ -59,6 +60,10 @@ $toggleUserPanelButton.off().on('click', function() {
         $userPanel.removeClass('close');
         $userPanel.addClass('open');        
     }
+});
+
+$userPanelBackground.off().on('click', function() {
+    $toggleUserPanelButton.trigger('click');    
 });
 
 $languageSelector.val(currentLanguage);
