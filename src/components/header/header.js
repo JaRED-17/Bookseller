@@ -66,7 +66,12 @@ $languageSelector.val(currentLanguage);
 translateComponent('header');
 
 if (userIsLoggedIn) {
-    $login.remove();    
+    $login.remove();
+    $.when(getUserData()).done(function(response) {
+        for (key in response.user1.data) {
+            $('#header_' + key).text(response.user1.data[key]);
+        }
+    });   
 }
 else {
     $userPanel.remove(); 

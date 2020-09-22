@@ -18,14 +18,22 @@
                 <option value="ru">Русский</option>
             </select>
         </div>
-        <div class="button login" translate_code="header_login">Login</div>
+        <div class="button login icon-login" translate_code="header_login">Login</div>
         <div class="user_panel close">
             <div class="button toggle icon-user"></div>
             <div class="user_details">
-                <a href="my-account" translate_code="header_my_account">My account</a>
-                <p>first name</p>
-                <p>last name</p>
-                <div class="button logout" translate_code="header_logout">Logout</div>
+                <a href="my-account" translate_code="header_my_account">My account</a>                          
+                <table>
+                    <tr>
+                        <td translate_code="header_first_name">first name</td>
+                        <td id="header_first_name"></td>
+                    </tr>
+                    <tr>
+                        <td translate_code="header_last_name">last name</td>
+                        <td id="header_last_name"></td>
+                    </tr>
+                </table>
+                <div class="button logout icon-logout" translate_code="header_logout">Logout</div>
             </div>
         </div>
     </div>

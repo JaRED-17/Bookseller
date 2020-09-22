@@ -15,12 +15,16 @@
         "ru": {
             "header_login": "Войти",
             "header_logout": "Выйти",
-            "header_my_account": "Мой аккаунт"
+            "header_my_account": "Мой аккаунт",
+            "header_first_name": "Имя",
+            "header_last_name": "Фамилия"
         },
         "en": {
             "header_login": "Login",
             "header_logout": "Logout",
-            "header_my_account": "My account"
+            "header_my_account": "My account",
+            "header_first_name": "First Name",
+            "header_last_name": "Last Name"
         }
     },
     "sidebar": {

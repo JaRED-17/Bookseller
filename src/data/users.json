@@ -3,8 +3,8 @@
         "login": "igor.borozdov@gmail.com",
         "password": "aA123456",
         "data": {
-            "firstName": "Igor",
-            "lastName": "Borozdov",
+            "first_name": "Igor",
+            "last_name": "Borozdov",
             "email": "igor.borozdov@gmail.com"
         }
     }
