@@ -5,7 +5,7 @@ $title.html('Contact us | Bookseller');
 
 $submitButton.off().on('click', function() {
     var hasError = false,
-        fields = ['firstName','lastName','email', 'subject','message'];
+        fields = ['first_name','last_name','email', 'subject','message'];
 
     for (var i = 0; i < fields.length; i++) {
         var $field = $('#contact_' + fields[i]);
