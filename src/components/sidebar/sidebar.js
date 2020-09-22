@@ -3,6 +3,7 @@ var $body = $('body'),
     $background = $('#sidebar .background');
     $sidebarCloseButton = $('#sidebar .top .button-close'),
     $logout = $('#sidebar .bottom .button.logout'),
+    $myAccount = $('#sidebar .middle .my-account');
 
 addEventHandlerForClosingSidebar();
 
@@ -19,9 +20,9 @@ function closeSideBar() {
         $sidebar.removeClass('open');
         $sidebar.addClass('close');
         $body.removeClass('no-overflow');
-        setTimeout(function () {
+        setTimeout(function() {
             $sidebar.removeClass('animation'); 
-        },500);
+        }, 500);
     }
 }
 
@@ -34,4 +35,5 @@ translateComponent('sidebar');
 
 if (!userIsLoggedIn) {
     $logout.remove();
+    $myAccount.remove();
 }

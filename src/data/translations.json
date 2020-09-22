@@ -23,16 +23,18 @@
     },
     "sidebar": {
         "ru": {
-            "main": "Главная",
-            "about_us": "О нас",
-            "support": "Обратная связь",
-            "sidebar_logout": "Выйти"
+            "sidebar_main": "Главная",
+            "sidebar_about_us": "О нас",
+            "sidebar_support": "Обратная связь",
+            "sidebar_logout": "Выйти",
+            "sidebar_my_account": "Мой аккаунт"
         },
         "en": {
-            "main": "Main page",
-            "about_us": "About us",
-            "support": "Support",
-            "sidebar_logout": "Logout"
+            "sidebar_main": "Main page",
+            "sidebar_about_us": "About us",
+            "sidebar_support": "Support",
+            "sidebar_logout": "Logout",
+            "sidebar_my_account": "My account"
         }
     },
     "footer": {
