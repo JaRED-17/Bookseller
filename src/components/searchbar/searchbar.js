@@ -49,24 +49,16 @@ function search(genre, searchWord) {
             }
         }
 
-        $container.pagination({
-            dataSource: books,
-            pageSize: 10,
-            showPrevious: true,
-            showNext: true,
-            autoHidePrevious: true,
-            autoHideNext: true,
-            callback: function(data) {
-                var html = generateHtmlTemplate(data);                
+        paginationInit($container, books, function(data) {
+            var html = generateHtmlTemplate(data);
 
-                if (html) {
-                    setTimeout(function() { 
-                        $booksContainer.html(html);                                                  
-                        $booksContainer.removeClass('loading');
-                    }, 500);
-                }
+            if (html) {
+                setTimeout(function() { 
+                    $booksContainer.html(html);                                                  
+                    $booksContainer.removeClass('loading');
+                }, 500);
             }
-        })       
+        });     
     });
 }
 

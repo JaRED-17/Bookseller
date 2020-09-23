@@ -12,18 +12,10 @@ function getBooks() {
             books.push(response[key]);            
         }
 
-        $container.pagination({
-            dataSource: books,
-            pageSize: 10,
-            showPrevious: true,
-            showNext: true,
-            autoHidePrevious: true,
-            autoHideNext: true,
-            callback: function(data) {
-                var html = generateHtmlTemplate(data);                
+        paginationInit($container, books, function(data) {
+            var html = generateHtmlTemplate(data);                
 
-                $booksContainer.html(html);
-            }
-        })
+            $booksContainer.html(html);
+        });
     });
 }

@@ -291,3 +291,17 @@ function generateHtmlTemplate(data) {
 
     return html;
 }
+
+function paginationInit($container, books, callback) {
+    $container.pagination({
+        dataSource: books,
+        pageSize: 10,
+        showPrevious: true,
+        showNext: true,
+        autoHidePrevious: true,
+        autoHideNext: true,
+        callback: function(data) {
+            callback(data);    
+        }
+    });    
+}
