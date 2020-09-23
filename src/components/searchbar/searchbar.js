@@ -16,7 +16,9 @@ $resetButton.off().on('click', function() {
 //HELPERS
 
 function search(genre, searchWord) {
-    var $booksContainer = $('#content #books .container');
+    var $container = $('#content #books .container'),
+        $booksContainer = $('#content #books .container .books');
+
     $booksContainer.html($preloader[0].innerHTML);
     $booksContainer.addClass('loading');
 
@@ -28,45 +30,44 @@ function search(genre, searchWord) {
             if (genre || searchWord) {
                 if (genre !== '' && searchWord === '') {
                     if (response[key].genre === genre) {
-                        books += bookHtml(response, key).join('');
+                        books.push(response[key]); 
                     }
                 }
                 else if (genre === '' && searchWord !== '') {
                     if (regex.test(response[key].title)) {
-                        books += bookHtml(response, key).join('');
+                        books.push(response[key]); 
                     }                   
                 }
                 else if (genre !== '' && searchWord !== '') {
                     if (response[key].genre === genre && regex.test(response[key].title)) {
-                        books += bookHtml(response, key).join('');
+                        books.push(response[key]); 
                     }                   
                 }
             }
             else {
-                books += bookHtml(response, key).join(''); 
+                books.push(response[key]);
             }
         }
 
-        if (books) {
-            setTimeout(function() { 
-                $booksContainer.html('');
-                $booksContainer.append(books);                                                   
-                $booksContainer.removeClass('loading');
-            }, 500);
-        }
-    });
-}
+        $container.pagination({
+            dataSource: books,
+            pageSize: 10,
+            showPrevious: true,
+            showNext: true,
+            autoHidePrevious: true,
+            autoHideNext: true,
+            callback: function(data) {
+                var html = generateHtmlTemplate(data);                
 
-function bookHtml(book, key) {
-    return [
-        '<div class="book">',
-            '<h3>' + book[key].title + '</h3>',
-            '<a href="book?=' + key + '">',
-                '<img src="' + book[key].img + '">',
-            '</a>',    
-            '<p>Cost: ' + book[key].cost + '</p>',
-        '</div>'
-    ];
+                if (html) {
+                    setTimeout(function() { 
+                        $booksContainer.html(html);                                                  
+                        $booksContainer.removeClass('loading');
+                    }, 500);
+                }
+            }
+        })       
+    });
 }
 
 translateComponent('searchbar');

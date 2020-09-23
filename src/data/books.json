@@ -4,125 +4,143 @@
         "img": "src/media/images/book.jpg",
         "cost": "124",
         "description": "Some description",
-        "genre": "Fantasy"
+        "genre": "Fantasy",
+        "url": "book?=book1"
     },
     "book2": {
         "title": "Book 2",
         "img": "src/media/images/book.jpg",
         "cost": "124",
         "description": "Some description",
-        "genre": "Adventure"
+        "genre": "Adventure",
+        "url": "book?=book2"
     },
     "book3": {
         "title": "Book 3",
         "img": "src/media/images/book.jpg",
         "cost": "124",
         "description": "Some description",
-        "genre": "Fantasy"
+        "genre": "Fantasy",
+        "url": "book?=book3"
     },
     "book4": {
         "title": "Book 4",
         "img": "src/media/images/book.jpg",
         "cost": "124",
         "description": "Some description",
-        "genre": "Adventure"
+        "genre": "Adventure",
+        "url": "book?=book4"
     },
     "book5": {
         "title": "Book 5",
         "img": "src/media/images/book.jpg",
         "cost": "124",
         "description": "Some description",
-        "genre": "Adventure"
+        "genre": "Adventure",
+        "url": "book?=book5"
     },
     "book6": {
         "title": "Book 6",
         "img": "src/media/images/book.jpg",
         "cost": "124",
         "description": "Some description",
-        "genre": "Adventure"
+        "genre": "Adventure",
+        "url": "book?=book6"
     },
     "book7": {
         "title": "Book 7",
         "img": "src/media/images/book.jpg",
         "cost": "124",
         "description": "Some description",
-        "genre": "Fantasy"
+        "genre": "Fantasy",
+        "url": "book?=book7"
     },
     "book8": {
         "title": "Book 8",
         "img": "src/media/images/book.jpg",
         "cost": "124",
         "description": "Some description",
-        "genre": "Fantasy"
+        "genre": "Fantasy",
+        "url": "book?=book8"
     },
     "book9": {
         "title": "Book 9",
         "img": "src/media/images/book.jpg",
         "cost": "124",
         "description": "Some description",
-        "genre": "Adventure"
+        "genre": "Adventure",
+        "url": "book?=book9"
     },
     "book10": {
         "title": "Book 10",
         "img": "src/media/images/book.jpg",
         "cost": "124",
         "description": "Some description",
-        "genre": "Fantasy"
+        "genre": "Fantasy",
+        "url": "book?=book10"
     },
     "book11": {
         "title": "Book 11",
         "img": "src/media/images/book.jpg",
         "cost": "124",
         "description": "Some description",
-        "genre": "Adventure"
+        "genre": "Adventure",
+        "url": "book?=book11"
     },
     "book12": {
         "title": "Book 12",
         "img": "src/media/images/book.jpg",
         "cost": "124",
         "description": "Some description",
-        "genre": "Adventure"
+        "genre": "Adventure",
+        "url": "book?=book12"
     },
     "book13": {
         "title": "Book 13",
         "img": "src/media/images/book.jpg",
         "cost": "124",
         "description": "Some description",
-        "genre": "Fantasy"
+        "genre": "Fantasy",
+        "url": "book?=book13"
     },
     "book14": {
         "title": "Book 14",
         "img": "src/media/images/book.jpg",
         "cost": "124",
         "description": "Some description",
-        "genre": "Adventure"
+        "genre": "Adventure",
+        "url": "book?=book14"
     },
     "book15": {
         "title": "Book 15",
         "img": "src/media/images/book.jpg",
         "cost": "124",
         "description": "Some description",
-        "genre": "Fantasy"
+        "genre": "Fantasy",
+        "url": "book?=book15"
     },
     "book16": {
         "title": "Book 16",
         "img": "src/media/images/book.jpg",
         "cost": "124",
         "description": "Some description",
-        "genre": "Fantasy"
+        "genre": "Fantasy",
+        "url": "book?=book16"
     },
     "book17": {
         "title": "Book 17",
         "img": "src/media/images/book.jpg",
         "cost": "124",
         "description": "Some description",
-        "genre": "Adventure"
+        "genre": "Adventure",
+        "url": "book?=book17"
     },
     "book18": {
         "title": "Book 18",
         "img": "src/media/images/book.jpg",
         "cost": "124",
         "description": "Some description",
-        "genre": "Adventure"
+        "genre": "Adventure",
+        "url": "book?=book18"
     }
 }

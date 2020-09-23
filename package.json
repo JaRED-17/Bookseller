@@ -16,6 +16,7 @@
   "dependencies": {
     "express": "^4.17.1",
     "jquery": "^3.5.1",
+    "paginationjs": "^2.1.5",
     "swiper": "^5.4.5"
   }
 }

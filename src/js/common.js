@@ -273,3 +273,21 @@ function login(login, password, $message) {
 function getUserData() {
     return getData('users');
 }
+
+function generateHtmlTemplate(data) {
+    var html = [];
+
+    for (var i = 0; i < data.length; i++) {
+        html += [
+            '<div class="book">',
+                '<h3>' + data[i].title + '</h3>',
+                '<a href="book?=' + data[i].url  + '">',
+                    '<img src="' + data[i].img + '">',
+                '</a>',    
+                '<p>Cost: ' + data[i].cost + '</p>',
+            '</div>'
+        ].join('');                    
+    }
+
+    return html;
+}

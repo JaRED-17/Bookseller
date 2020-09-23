@@ -5,21 +5,25 @@ getBooks();
 function getBooks() {
     $.when(getData()).done(function (response) {
         var books = [],
-            $booksContainer = $('#content #books .container');
+            $container = $('#content #books .container');
+            $booksContainer = $('#content #books .container .books');
 
         for (key in response) {
-            books += [
-                '<div class="book">',
-                    '<h3>' + response[key].title + '</h3>',
-                    '<a href="book?=' + key + '">',
-                        '<img src="' + response[key].img + '">',
-                    '</a>',    
-                    '<p>Cost: ' + response[key].cost + '</p>',
-                '</div>'
-            ].join('');
-            
+            books.push(response[key]);            
         }
-        
-        $booksContainer.html(books);
+
+        $container.pagination({
+            dataSource: books,
+            pageSize: 10,
+            showPrevious: true,
+            showNext: true,
+            autoHidePrevious: true,
+            autoHideNext: true,
+            callback: function(data) {
+                var html = generateHtmlTemplate(data);                
+
+                $booksContainer.html(html);
+            }
+        })
     });
 }

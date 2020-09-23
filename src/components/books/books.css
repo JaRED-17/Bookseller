@@ -4,6 +4,10 @@
 }
 
 #content #books .container {
+    width: 100%;
+}
+
+#content #books .container .books {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -29,6 +33,35 @@
     text-align: center;
 }
 
+#content #books .container .paginationjs {
+    margin: 10px 0;
+}
+
+#content #books .container .paginationjs ul {
+    display: flex;
+    margin: 0 auto;
+    width: max-content;
+    padding: 0;
+}
+
+#content #books .container .paginationjs ul li {
+    list-style-type: none;
+    border-radius: 10px 3px 10px 3px;
+    background-color: #43f1e0;
+    color: black;
+    padding: 5px 20px;
+    margin: 5px;
+}
+
+#content #books .container .paginationjs ul li:hover {
+    background-color: #b8f5ef;
+    cursor: pointer;
+}
+
+#content #books .container .paginationjs ul li a {
+    text-decoration: none;
+}
+
 #content #books .loading {
     min-height: 500px;
     align-items: center;
@@ -37,4 +70,9 @@
 
 #content #books .loading img {
     width: 100px;
+}
+
+#content #books .loading .container {
+    width: auto;
+    min-width: initial;
 }
