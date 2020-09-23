@@ -303,5 +303,9 @@ function paginationInit($container, books, callback) {
         callback: function(data) {
             callback(data);    
         }
-    });    
+    }); 
+    
+    var $pagination_li = $('.paginationjs li');
+
+    $pagination_li.addClass('button');
 }

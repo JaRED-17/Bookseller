@@ -45,17 +45,7 @@
 }
 
 #content #books .container .paginationjs ul li {
-    list-style-type: none;
-    border-radius: 10px 3px 10px 3px;
-    background-color: #43f1e0;
-    color: black;
-    padding: 5px 20px;
     margin: 5px;
-}
-
-#content #books .container .paginationjs ul li:hover {
-    background-color: #b8f5ef;
-    cursor: pointer;
 }
 
 #content #books .container .paginationjs ul li a {
