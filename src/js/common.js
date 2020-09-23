@@ -281,7 +281,7 @@ function generateHtmlTemplate(data) {
         html += [
             '<div class="book">',
                 '<h3>' + data[i].title + '</h3>',
-                '<a href="book?=' + data[i].url  + '">',
+                '<a href="' + data[i].url  + '">',
                     '<img src="' + data[i].img + '">',
                 '</a>',    
                 '<p>Cost: ' + data[i].cost + '</p>',
