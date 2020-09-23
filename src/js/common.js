@@ -301,11 +301,9 @@ function paginationInit($container, books, callback) {
         autoHidePrevious: true,
         autoHideNext: true,
         callback: function(data) {
-            callback(data);    
+            callback(data);            
+            var $pagination_li = $('.paginationjs li');
+            $pagination_li.addClass('button');
         }
     }); 
-    
-    var $pagination_li = $('.paginationjs li');
-
-    $pagination_li.addClass('button');
 }
