@@ -160,55 +160,77 @@
 /* Media */
 
 @media screen and (max-width: 360px) {
+
     #header {
         height: 60px;
     }
+
     #header .container > div:nth-child(2) {
         width: 70px;
     }
+
     #header .container > div:not(:nth-child(2)) {
         width: calc(50% - 45px);
     }
-    #header .container .header_center img {
-        width: 90px;
-    }
-    #header.scrolled .container .header_center img {
-        width: 70px;    
-    }
-    #header .container .header_right {
-        padding-right: 10px;
-    }
+
+    /* Left */
+
     #header .container .header_left {
         padding-left: 10px;
     }
 
-    #header .container .header_right .button.login {
-        font-size: 0;
-        min-width: 20px;
-        min-height: 26px;
-        padding: 5px 10px;
+    /* Center */
+
+    #header .container .header_center img {
+        width: 90px;
     }
-    .icon-login:before {
-        font-size: 18px;
-        top: 4px;
+
+    #header.scrolled .container .header_center img {
+        width: 70px;    
     }
+
+    /* Right */
+
+    #header .container .header_right {
+        padding-right: 10px;
+    }
+
     #header .container .header_right .language {
         width: 40px;
     }
+    
     #header .container .header_right .language select {
         height: 36px;
     }
-}
 
-@media screen and (max-width: 768px) {
     #header .container .header_right .button.login {
         font-size: 0;
         min-width: 20px;
         min-height: 26px;
         padding: 5px 10px;
     }
+
     .icon-login:before {
         font-size: 18px;
         top: 4px;
     }
+
+}
+
+@media screen and (max-width: 768px) {
+
+    /* Right */
+
+    #header .container .header_right .button.login {
+        font-size: 0;
+        min-width: 20px;
+        min-height: 26px;
+        padding: 5px 10px;
+    }
+
+    .icon-login:before {
+        font-size: 18px;
+        top: 4px;
+    }
+    
 }
