@@ -65,6 +65,8 @@ function appendComponent(componentName, componentId, callback) {
     var allowDoubleUploadFor = ['login'],
         componentData = componentsData[componentName];
 
+    callback = callback || function () {};
+
     var proceedCallback = function () {
         if (shouldItbeAdded(componentData, 'html')) {
             $.when(getComponent(componentName)).done(function (response) {
@@ -77,9 +79,7 @@ function appendComponent(componentName, componentId, callback) {
                 }
             });
         }
-    };
-
-    callback = callback || function () {};
+    };    
 
     if (window['component' + componentName + 'hasBeenAdded']) {
         if (allowDoubleUploadFor.indexOf(componentName) == -1) {
