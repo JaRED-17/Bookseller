@@ -12,7 +12,7 @@ body {
 }
 
 .container {
-    min-width: 360px;
+    min-width: 340px;
     max-width: 1920px;
     margin: 0 auto;
 }
@@ -147,10 +147,6 @@ input:-webkit-autofill {
 /* Media */ 
 
 @media screen and (max-width: 360px) {
-
-    .container {
-        min-width: 340px;
-    }
 
     /* Form */
 
