@@ -140,3 +140,15 @@ select:hover {
 input:-webkit-autofill {
     -webkit-box-shadow: 0 0 0px 1000px #43f1e0 inset;
 }
+
+
+/* Media */ 
+
+@media screen and (max-width: 360px) {
+    input,
+    select,
+    textarea {
+        max-width: 320px;
+        min-width: 320px;
+    }
+}

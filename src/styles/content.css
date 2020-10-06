@@ -4,3 +4,11 @@
     min-height: 800px;
     padding-top: 80px;
 }
+
+/* Media */ 
+
+@media screen and (max-width: 767px) {
+    #content {
+        padding-top: 60px;
+    }    
+}

@@ -36,3 +36,11 @@
     -webkit-align-items: center;
     align-items: center;
 }
+
+/* Media */ 
+
+@media screen and (max-width: 767px) {
+    #slider .container {
+        min-width: auto;
+    }
+}
