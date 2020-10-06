@@ -65,6 +65,20 @@ function appendComponent(componentName, componentId, callback) {
     var allowDoubleUploadFor = ['login'],
         componentData = componentsData[componentName];
 
+    var proceedCallback = function () {
+        if (shouldItbeAdded(componentData, 'html')) {
+            $.when(getComponent(componentName)).done(function (response) {
+                if (response) {
+                    $(componentId).html(response);
+                    callback();
+                    if (shouldItbeAdded(componentData, 'js')) {
+                        includeElementAsync("src/components/" + componentName + "/" + componentName + ".js", 'script');
+                    }
+                }
+            });
+        }
+    };
+
     callback = callback || function () {};
 
     if (window['component' + componentName + 'hasBeenAdded']) {
@@ -72,31 +86,10 @@ function appendComponent(componentName, componentId, callback) {
             callback();
         }
         else {
-            if (shouldItbeAdded(componentData, 'html')) {
-                $.when(getComponent(componentName)).done(function (response) {
-                    if (response) {
-                        $(componentId).html(response);
-                        callback();
-                    }
-                });
-            }
+            proceedCallback();
         }
     }
     else {
-        var proceedCallback = function () {
-            if (shouldItbeAdded(componentData, 'html')) {
-                $.when(getComponent(componentName)).done(function (response) {
-                    if (response) {
-                        $(componentId).html(response);
-                        callback();
-                        if (shouldItbeAdded(componentData, 'js')) {
-                            includeElementAsync("src/components/" + componentName + "/" + componentName + ".js", 'script');
-                        }
-                    }
-                });
-            }
-        };
-
         if (shouldItbeAdded(componentData, 'css')) {
             includeElementAsync("src/components/" + componentName + "/" + componentName + ".css", 'link', proceedCallback); 
         }
@@ -175,6 +168,11 @@ function includeElementAsync(url, type, onload) {
     else {
         elem.type = 'text/javascript';
         elem.src = url;
+        var $prevElem = $("script[src='"+ url + "']");
+
+        if ($prevElem.length > 0) {
+            $prevElem.remove();
+        }
     }
 
     parent.append(elem);

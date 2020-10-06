@@ -37,7 +37,7 @@ $login.off().on('click', function() {
             $('#popup').removeClass('loading');
             translateComponent('login');
         });
-    }, 500)
+    }, 500);
 });
 
 $logout.off().on('click', function() {
