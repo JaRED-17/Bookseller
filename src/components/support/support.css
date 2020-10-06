@@ -5,3 +5,11 @@
 #content .container form textarea {
     min-height: 200px;
 }
+
+/* Media */ 
+
+@media screen and (max-width: 360px) {
+    #content .container {
+        padding: 10px;
+    }    
+}

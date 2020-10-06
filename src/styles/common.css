@@ -145,6 +145,17 @@ input:-webkit-autofill {
 /* Media */ 
 
 @media screen and (max-width: 360px) {
+
+    .container {
+        min-width: 340px;
+    }
+
+    /* Form */
+
+    form {
+        width: 320px;
+    }
+
     input,
     select,
     textarea {
