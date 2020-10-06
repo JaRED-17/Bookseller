@@ -170,14 +170,10 @@
     }
 
     #header .container > div:not(:nth-child(2)) {
-        width: calc(50% - 45px);
+        width: calc(50% - 35px);
     }
 
     /* Left */
-
-    #header .container .header_left {
-        padding-left: 10px;
-    }
 
     /* Center */
 
@@ -190,10 +186,6 @@
     }
 
     /* Right */
-
-    #header .container .header_right {
-        padding-right: 10px;
-    }
 
     #header .container .header_right .language {
         width: 40px;

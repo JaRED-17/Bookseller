@@ -1,7 +1,11 @@
-#footer .container {
+#footer {
     background-color: lightblue;
+}
+
+#footer .container {
     text-align: center;
 }
+
 #footer .container p {
     padding-top: 80px;
     margin: 0;
