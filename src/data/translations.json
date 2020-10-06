@@ -114,5 +114,11 @@
             "my-account_last_name": "Last Name",
             "my-account_email": "Email"
         }
+    },
+    "error": {
+        "1" : {
+            "ru": "Заполните необходимые поля!",
+            "en": "Fill in the required fields"
+        }
     }
 }

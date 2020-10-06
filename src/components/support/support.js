@@ -18,7 +18,7 @@ $submitButton.off().on('click', function() {
             hasError = true;
             $field.addClass('error');
             $field.removeClass('success');
-            showNotification('Заполните необходимые поля!');
+            showNotification(allTranslations.error[1][currentLanguage]);
         }        
     }  
 
