@@ -8,7 +8,9 @@
     margin: 10px;
 }
 
-@media (max-width: 1020px) {
+/* Media */ 
+
+@media screen and (max-width: 1020px) {
     #searchbar #searchForm {
         width: min-content;
         height: 150px;

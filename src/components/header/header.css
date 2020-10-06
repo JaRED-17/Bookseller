@@ -156,3 +156,20 @@
 #header .container .header_right .button.toggle:before {
     margin-right: 0;
 }
+
+/* Media */ 
+
+@media screen and (max-width: 767px) {
+    #header .container > div:nth-child(2) {
+        width: 80px;
+    }
+    #header .container > div:not(:nth-child(2)) {
+        width: calc(50% - 40px);
+    }
+    #header .container .header_center img {
+        width: 110px;
+    }
+    .icon-login:before {
+        display: none;
+    }
+}

@@ -26,3 +26,11 @@
 #content .container .book .book-info .book-description {
     width: calc(100% - 360px);
 }
+
+/* Media */
+
+@media screen and (max-width: 359px) {
+    #content .container .book .book-info .book-img {
+        width: 150px;
+    }
+}

@@ -66,3 +66,11 @@
     width: auto;
     min-width: initial;
 }
+
+/* Media */ 
+
+@media screen and (max-width: 767px) {
+    #content #books .book {
+        width: 150px;
+    }
+}
