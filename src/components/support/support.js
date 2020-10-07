@@ -21,7 +21,7 @@ $submitButton.off().on('click', function() {
             $field.addClass('error');
             $field.removeClass('success');
             showNotification(allTranslations.error[1][currentLanguage]);
-            $error.text('Mandatory field');
+            $error.text(allTranslations.error[2][currentLanguage]);
             $error.show();
         }        
     }  
@@ -36,7 +36,7 @@ $submitButton.off().on('click', function() {
         $('#contactForm').trigger('reset');
         hidePreloader();
         setTimeout(function() {
-            showNotification('Данные успешно отправлены');
+            showNotification(allTranslations.success[1][currentLanguage]);
         },1000);        
     }
 });

@@ -119,6 +119,16 @@
         "1" : {
             "ru": "Заполните необходимые поля!",
             "en": "Fill in the required fields"
+        },
+        "2" : {
+            "ru": "Обязательное поле",
+            "en": "Mandatory field"
+        }
+    },
+    "success": {
+        "1" : {
+            "ru": "Данные успешно отправлены",
+            "en": "Data has been sent successfully"
         }
     }
 }
