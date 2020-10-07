@@ -9,7 +9,7 @@
     z-index: 10;
 }
 
-#header .container {
+#header > .container {
     width: 90%;
     margin: 0 auto;
 }
@@ -81,16 +81,6 @@
 
 #header .container .header_right {
     justify-content: flex-end;
-}
-
-#header .container .header_right .language {
-    width: 100px;
-    padding: 0 15px;
-}
-
-#header .container .header_right .language select {
-    height: 33px;
-    min-width: initial;
 }
 
 #header .container .header_right .user_panel {
@@ -186,14 +176,6 @@
     }
 
     /* Right */
-
-    #header .container .header_right .language {
-        width: 40px;
-    }
-    
-    #header .container .header_right .language select {
-        height: 36px;
-    }
 
     #header .container .header_right .button.login {
         font-size: 0;

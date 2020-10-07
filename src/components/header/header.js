@@ -5,7 +5,7 @@ var $body = $('body'),
     $loginContent = $('#popup .container .content'),
     $sidebarOpenButton = $('#header .header_left .button'),
     $preloader = $('#preloader'),
-    $languageSelector = $('#language'),
+    $languageSelector = $('#language-selector'),
     $userPanel = $('#header .header_right .user_panel'),
     $userDetails = $('#header .header_right .user_details'),
     $toggleUserPanelButton = $('#header .header_right .user_panel .button.toggle'),
@@ -45,12 +45,6 @@ $logout.off().on('click', function() {
     window.location.href = '/';        
 });
 
-$languageSelector.off().on('change', function() {
-    setCookie('language', getSelectedLanguage());
-    setCurrentLanguage();
-    translateAll();
-});
-
 $toggleUserPanelButton.off().on('click', function() {
     if ($userPanel.hasClass('open')) {
         $userPanel.removeClass('open');
@@ -66,8 +60,6 @@ $userPanelBackground.off().on('click', function() {
     $toggleUserPanelButton.trigger('click');    
 });
 
-$languageSelector.val(currentLanguage);
-
 translateComponent('header');
 
 if (userIsLoggedIn) {
@@ -81,3 +73,5 @@ if (userIsLoggedIn) {
 else {
     $userPanel.remove(); 
 }
+
+appendComponent('language-selector', $languageSelector);

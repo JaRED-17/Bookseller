@@ -212,7 +212,17 @@ function translateComponent(name) {
 }
 
 function getSelectedLanguage() {
-    return $languageSelector.val() || defaultLanguage;
+    var $languageSelectorButton = $('#language-selector .selector');
+
+    if ($languageSelectorButton) {
+        if ($languageSelectorButton.hasClass('en')) {
+            return 'en';
+        }
+        else if ($languageSelectorButton.hasClass('ru')) {        
+            return 'ru';
+        }
+    }
+    else return defaultLanguage;
 }
 
 function translateAll() {
