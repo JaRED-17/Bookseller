@@ -1,6 +1,7 @@
 var $languageSelector = $('#language-selector');
     $languageSelectorButton = $('#language-selector .selector'),
-    $languageSelectorOption = $('#language-selector .option');
+    $languageSelectorOption = $('#language-selector .option'),
+    $languageSelectorBackground = $('#language-selector .background');
 
 setLanguage();
 
@@ -30,6 +31,10 @@ $languageSelectorOption.off().on('click', function() {
     setCookie('language', getSelectedLanguage());
     setCurrentLanguage();
     translateAll();
+});
+
+$languageSelectorBackground.off().on('click', function() {
+    $languageSelectorButton.trigger('click');
 });
 
 function setLanguage() {
