@@ -8,17 +8,21 @@ $submitButton.off().on('click', function() {
         fields = ['first_name','last_name','email', 'subject','message'];
 
     for (var i = 0; i < fields.length; i++) {
-        var $field = $('#contact_' + fields[i]);
+        var $field = $('#contact_' + fields[i]),
+            $error = $('#contact_' + fields[i] + '_error');
 
         if ($field.val()) {
             $field.addClass('success');
-            $field.removeClass('error');            
+            $field.removeClass('error');
+            $error.hide();
         }
         else {
             hasError = true;
             $field.addClass('error');
             $field.removeClass('success');
             showNotification(allTranslations.error[1][currentLanguage]);
+            $error.text('Mandatory field');
+            $error.show();
         }        
     }  
 

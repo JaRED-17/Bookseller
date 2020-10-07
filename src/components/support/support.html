@@ -3,14 +3,17 @@
         <div>
             <label for="contact_first_name" translate_code="support_first_name">Имя</label>
             <input id="contact_first_name" type="text" name="firstName">
+            <div id="contact_first_name_error" class="error-message" style="display: none;"></div>
         </div>
         <div>
             <label for="contact_last_name" translate_code="support_last_name">Фамилия</label>
             <input id="contact_last_name" type="text" name="lastName">
+            <div id="contact_last_name_error" class="error-message" style="display: none;"></div>
         </div>
         <div>
             <label for="contact_email" translate_code="support_email">E-mail</label>
             <input id="contact_email" type="text" name="email">
+            <div id="contact_email_error" class="error-message" style="display: none;"></div>
         </div>
         <div>
             <label for="contact_subject" translate_code="support_subject">Тема</label>
@@ -19,10 +22,12 @@
                 <option value="1">1</option>
                 <option value="2">2</option>
             </select>
+            <div id="contact_subject_error" class="error-message" style="display: none;"></div>
         </div>
         <div>
             <label for="contact_message" translate_code="support_message">Сообщение</label>
             <textarea id="contact_message" name="message"></textarea>
+            <div id="contact_message_error" class="error-message" style="display: none;"></div>
         </div>
         <div class="button" translate_code="support_button_send">Отправить</div>
     </form>
