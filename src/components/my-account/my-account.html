@@ -1,17 +1,32 @@
-<div class="container">    
-    <form id="my-accountForm">
-        <h3 translate_code="my-account">My account</h3>
-        <div>
-            <label for="my-account_first_name" translate_code="my-account_first_name">Имя</label>
-            <input id="my-account_first_name" type="text" name="firstName">
+<div class="container">
+    <div class="navigation-panel">
+        <div class="item close">
+            <div class="item-header" translate_code="my-account_my_profile">My profile</div>
+            <div class="item-content">
+                <div class="sub-item">
+                    <a href="my-account?details" translate_code="my-account_personal_information">Personal information</a>
+                </div>
+                <div class="sub-item">
+                    <a href="my-account?other" translate_code="my-account_other">Other</a>
+                </div>                
+            </div>
         </div>
-        <div>
-            <label for="my-account_last_name" translate_code="my-account_last_name">Фамилия</label>
-            <input id="my-account_last_name" type="text" name="lastName">
-        </div>
-        <div>
-            <label for="my-account_email" translate_code="my-account_email">E-mail</label>
-            <input id="my-account_email" type="text" name="email">
-        </div>
-    </form>
+    </div>
+    <div class="my-account-content">
+        <form id="my-accountForm">
+            <h3 translate_code="my-account">My account</h3>
+            <div>
+                <label for="my-account_first_name" translate_code="my-account_first_name">Имя</label>
+                <input id="my-account_first_name" type="text" name="firstName">
+            </div>
+            <div>
+                <label for="my-account_last_name" translate_code="my-account_last_name">Фамилия</label>
+                <input id="my-account_last_name" type="text" name="lastName">
+            </div>
+            <div>
+                <label for="my-account_email" translate_code="my-account_email">E-mail</label>
+                <input id="my-account_email" type="text" name="email">
+            </div>
+        </form>
+    </div>
 </div>

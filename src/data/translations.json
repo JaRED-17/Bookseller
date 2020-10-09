@@ -106,13 +106,19 @@
             "my-account": "Мой аккаунт",
             "my-account_first_name": "Имя",
             "my-account_last_name": "Фамилия",
-            "my-account_email": "Электронная почта"
+            "my-account_email": "Электронная почта",
+            "my-account_my_profile": "Мой профиль",
+            "my-account_personal_information": "Персональная информация",
+            "my-account_other": "Другое"
         },
         "en": {
             "my-account": "My account",
             "my-account_first_name": "First Name",
             "my-account_last_name": "Last Name",
-            "my-account_email": "Email"
+            "my-account_email": "Email",
+            "my-account_my_profile": "My profile",
+            "my-account_personal_information": "Personal information",
+            "my-account_other": "Other"
         }
     },
     "error": {

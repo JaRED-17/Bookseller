@@ -1,0 +1,81 @@
+/* MY ACCOUNT */
+
+#content .container {
+    display: flex;
+    height: 100%;
+    padding: 20px;
+}
+
+#content .container > div {    
+    background-color: white;
+    border: 1px solid grey;
+}
+
+.navigation-panel {
+    width: 300px;
+    margin-right: 20px;    
+}
+
+.my-account-content {
+    width: calc(100% - 300px);
+}
+
+.navigation-panel .item .item-header {
+    position: relative;
+    font-weight: 700;
+    padding: 17px 30px;
+    color: #333;
+    cursor: pointer;
+    border-bottom: 1px solid grey;
+}
+
+.navigation-panel .item .item-header:after {
+    content: "";
+    position: absolute;
+    top: 45%;
+    right: 20px;
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid #333;
+}
+
+.navigation-panel .item.open .item-header:after {
+    transform: rotateX(180deg);
+}
+
+.navigation-panel .item.close .item-content {
+    display: none;
+}
+
+.navigation-panel .item .item-content {
+    overflow: hidden;    
+}
+
+.navigation-panel .item .item-content .sub-item {
+    padding: 10px 15px 10px 50px;
+    border-bottom: 1px solid grey;
+}
+
+/* Media */
+
+@media screen and (max-width: 360px) {
+    
+    #content .container {
+        padding: 10px;
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+
+    .navigation-panel {
+        display: none;
+    }
+
+    .my-account-content {
+        width: 100%;
+    }
+    
+}
