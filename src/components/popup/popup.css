@@ -64,7 +64,7 @@
         height: 100%;
     }
     #popup .container .content {
-        height: 100%;
+        height: calc(100% - 42px);
         display: flex;
         justify-content: center;
         align-items: center;
